@@ -6,6 +6,9 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
+            var carsAvailable = new CarLot();
+
             //TODO
 
             //Create a seperate class file called Car
@@ -20,6 +23,7 @@ namespace CarLotSimulator
             var isThatUhSupra = new Car();
 
             //Set the properties for each of the cars
+            // Using Dot notation here for all
             vwMk4.Year = 2003;
             vwMk4.Make = "Volkswagen";
             vwMk4.Model = "Jetta Sportwagen TDI";
@@ -42,18 +46,50 @@ namespace CarLotSimulator
             isThatUhSupra.IsDriveable = true;
 
             //Call each of the methods for each car
+            Console.WriteLine("\n(Call Methods for Each of the 3 cars and their noises)\n");
             vwMk4.MakeEngineNoise(vwMk4.EngineNoise);
             vwMk4.MakeHonkNoise(vwMk4.HonkNoise);
+
+            Console.WriteLine("\n---------------------------------\n"); // Spacing for console view
 
             bmvM5.MakeEngineNoise(bmvM5.EngineNoise);
             bmvM5.MakeHonkNoise(bmvM5.HonkNoise);
 
+            Console.WriteLine("\n---------------------------------\n"); // Spacing for console view
+
             isThatUhSupra.MakeEngineNoise(isThatUhSupra.EngineNoise);
             isThatUhSupra.MakeHonkNoise(isThatUhSupra.HonkNoise);
+
+            Console.WriteLine("\n=================================\n"); // Spacing for console view
 
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
+
+            // More cars created
+            // Using Object Initializer Syntax
+            var vwGolf = new Car()
+            {
+                Year = 2012,
+                Make = "Volkswagen",
+                Model = "Golf TDI",
+                EngineNoise = "SSSssswwuu djehdjehdjehdjehdjeh",
+                HonkNoise = "honkkk",
+                IsDriveable = true
+            };
+
+            // Using Custom constructor (overlading)
+            var fordFocus = new Car(2012, "Ford", "Focus", "nehh theh theh clunk chck stih schunk", "beep", false);
+
+            // Using Dot notation for this one
+            var skodaOct = new Car();
+
+            skodaOct.Year = 2024;
+            skodaOct.Make = "Skoda";
+            skodaOct.Model = "Octavia TDI";
+            skodaOct.EngineNoise = "druh druh druh druh";
+            skodaOct.HonkNoise = "BEEEEEEP";
+            skodaOct.IsDriveable = true;
 
             //*************BONUS X 2*************//
 
@@ -61,6 +97,16 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+            carsAvailable.CarList.Add(vwMk4);
+            carsAvailable.CarList.Add(bmvM5);
+            carsAvailable.CarList.Add(isThatUhSupra);
+            carsAvailable.CarList.Add(vwGolf);
+            carsAvailable.CarList.Add(fordFocus);
+            carsAvailable.CarList.Add(skodaOct);
+
+            carsAvailable.PrintAllCars();
+
         }
     }
 }
