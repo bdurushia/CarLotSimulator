@@ -17,7 +17,8 @@ namespace CarLotSimulator
 
             foreach (var car in CarList) 
             {
-                car.CarSpec(car.Year, car.Make, car.Model);
+                //car.CarSpec(car.Year, car.Make, car.Model);
+                Console.WriteLine($"Year:\t{car.Year}\nMake:\t{car.Make}\nModel:\t{car.Model}");
 
                 Console.WriteLine("\n---------------------------------\n");
             }

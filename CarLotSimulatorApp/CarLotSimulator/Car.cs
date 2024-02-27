@@ -48,9 +48,9 @@ namespace CarLotSimulator
             Console.WriteLine($"{Make}: {HonkNoise}");
         }
         
-        public void CarSpec(int Year, string Make, string Model)
-        {
-            Console.WriteLine($"Year:\t{Year}\nMake:\t{Make}\nModel:\t{Model}");
-        }
+        //public void CarSpec(int Year, string Make, string Model)
+        //{
+        //    Console.WriteLine($"Year:\t{Year}\nMake:\t{Make}\nModel:\t{Model}");
+        //}
     }
 }
