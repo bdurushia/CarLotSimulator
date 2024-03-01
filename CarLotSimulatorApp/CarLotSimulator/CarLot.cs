@@ -23,6 +23,8 @@ namespace CarLotSimulator
                 Console.WriteLine("\n---------------------------------\n");
             }
         }
+
+        public static int NumberOfCars { get; set; }
     }
 }
 

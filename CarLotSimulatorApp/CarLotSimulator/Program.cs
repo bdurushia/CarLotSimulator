@@ -19,8 +19,16 @@ namespace CarLotSimulator
 
             //Now that the Car class is created we can instanciate 3 new cars
             var vwMk4 = new Car();
+            CarLot.NumberOfCars++;  // Count new car creation and add to Number of Cars, 
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}"); // then print
+
             var bmvM5 = new Car();
+            CarLot.NumberOfCars++;
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}");
+
             var isThatUhSupra = new Car();
+            CarLot.NumberOfCars++;
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}");
 
             //Set the properties for each of the cars
             // Using Dot notation here for all
@@ -78,8 +86,14 @@ namespace CarLotSimulator
                 IsDriveable = true
             };
 
+            CarLot.NumberOfCars++;
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}");
+
             // Using Custom constructor (overlading)
             var fordFocus = new Car(2012, "Ford", "Focus", "nehh theh theh clunk chck stih schunk", "beep", false);
+
+            CarLot.NumberOfCars++;
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}");
 
             // Using Dot notation for this one
             var skodaOct = new Car();
@@ -90,6 +104,9 @@ namespace CarLotSimulator
             skodaOct.EngineNoise = "druh druh druh druh";
             skodaOct.HonkNoise = "BEEEEEEP";
             skodaOct.IsDriveable = true;
+
+            CarLot.NumberOfCars++;
+            Console.WriteLine($"Car Added to Lot! Total number of cars in Lot: {CarLot.NumberOfCars}");
 
             //*************BONUS X 2*************//
 
